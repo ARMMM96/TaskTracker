@@ -1,4 +1,6 @@
+import { ClassGetter } from '@angular/compiler/src/output/output_ast';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-button',
@@ -6,8 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./button.component.css'],
 })
 export class ButtonComponent implements OnInit {
-  @Input() text:any;
-  @Input() color:any;
+  @Input() text:string;
+  @Input() color:string;
   @Output() btnClick = new EventEmitter();
 
   constructor() { }
